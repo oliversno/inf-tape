@@ -1,20 +1,23 @@
 #include "inf_tape.h"
 #include <algorithm>
 
-
-T infTape::get() const {
+template <typename T>
+T infTape<T>::get() const {
     return *it;
 }
 
-void infTape::set(const T in) {
+template <typename T>
+void infTape<T>::set(const T in) {
     *it = in;
 }
 
-void infTape::increment() const{
+template <typename T>
+void infTape<T>::increment() const{
     increment(1);
 }
 
-void infTape::increment(const size_t delta) const{
+template <typename T>
+void infTape<T>::increment(const size_t delta) const{
     if(it+delta >= vec.back()){
         size_t it_dist = it - vec.begin();
         vec.resize(vec.size()+delta);
@@ -23,11 +26,13 @@ void infTape::increment(const size_t delta) const{
     it += delta;
 }
 
-void infTape::decrement() const{
+template <typename T>
+void infTape<T>::decrement() const{
     decrement(1);
 }
 
-void infTape::decrement(const size_t delta) const{
+template <typename T>
+void infTape<T>::decrement(const size_t delta) const{
     if(it-delta < vec.begin()){
         size_t it_dist = it - vec.begin();
         vec.resize(vec.size()+delta);

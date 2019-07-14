@@ -1,29 +1,35 @@
 #include "tape_deque.h"
 
-T tapeDeque::get() const {
+template <typename T>
+T tapeDeque<T>::get() const {
     return *it;
 }
 
-void tapeDeque::set(const T in) {
+template <typename T>
+void tapeDeque<T>::set(const T in) {
     *it = in;
 }
 
-void tapeDeque::increment() const{
+template <typename T>
+void tapeDeque<T>::increment() const{
     increment(1);
 }
 
-void tapeDeque::increment(const size_t delta) const{
+template <typename T>
+void tapeDeque<T>::increment(const size_t delta) const{
     if(it+delta >= deque.back()){
         deque.insert(deque.end(), delta, T{});
     }
     it += delta;
 }
 
-void decrement() const{
+template <typename T>
+void tapeDeque<T>::decrement() const{
     decrement(1);
 }
 
-void decrement(const size_t delta) const{
+template <typename T>
+void tapeDeque<T>::decrement(const size_t delta) const{
     if(it-delta < vec.begin()){
         deque.insert(deque.begin(), delta, T{});
     }

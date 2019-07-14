@@ -19,7 +19,7 @@ class infTape{
         void decrement(const size_t delta) const;
     private:
         std::vector<T> vec;
-        std::vector<T>::iterator it;
+        typename std::vector<T>::iterator it;
 };
 
 #endif

@@ -19,7 +19,7 @@ class tapeDeque{
         void decrement(const size_t delta) const;
     private:
         std::deque<T> deque;
-        std::deque<T>::iterator it;
+        typename std::deque<T>::iterator it;
 };
 
 #endif
