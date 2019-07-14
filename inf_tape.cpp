@@ -6,15 +6,15 @@ T infTape::get() const {
     return *it;
 }
 
-void set(const T in) {
+void infTape::set(const T in) {
     *it = in;
 }
 
-void increment() const{
+void infTape::increment() const{
     increment(1);
 }
 
-void increment(const size_t delta) const{
+void infTape::increment(const size_t delta) const{
     if(it+delta >= vec.back()){
         size_t it_dist = it - vec.begin();
         vec.resize(vec.size()+delta);
@@ -23,11 +23,11 @@ void increment(const size_t delta) const{
     it += delta;
 }
 
-void decrement() const{
+void infTape::decrement() const{
     decrement(1);
 }
 
-void decrement(const size_t delta) const{
+void infTape::decrement(const size_t delta) const{
     if(it-delta < vec.begin()){
         size_t it_dist = it - vec.begin();
         vec.resize(vec.size()+delta);
