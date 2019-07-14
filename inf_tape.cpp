@@ -1,18 +1,13 @@
 #include "inf_tape.h"
 #include <algorithm>
 
+
 T infTape::get() const {
-    if(it){
-        return *it;
-    }
-    throw emptyException{};
+    return *it;
 }
 
 void set(const T in) {
-    if(it){
-        *it = in;
-    }
-    throw emptyException{};
+    *it = in;
 }
 
 void increment() const{
@@ -21,7 +16,9 @@ void increment() const{
 
 void increment(const size_t delta) const{
     if(it+delta >= vec.back()){
+        size_t it_dist = it - vec.begin();
         vec.resize(vec.size()+delta);
+        it = vec.begin() + it_dist;
     }
     it += delta;
 }
@@ -32,8 +29,10 @@ void decrement() const{
 
 void decrement(const size_t delta) const{
     if(it-delta < vec.begin()){
+        size_t it_dist = it - vec.begin();
         vec.resize(vec.size()+delta);
         std::shift_right(vec.begin(), vec.end(), delta);
+        it = vec.begin() + it_dist;
     }
     it -= delta;
 }

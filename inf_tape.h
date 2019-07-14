@@ -7,6 +7,7 @@ template <typename T>
 class infTape{
     public:
         infTape(){
+            vec.resize(1);
             it = vec.begin();
         }
 
