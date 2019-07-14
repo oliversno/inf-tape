@@ -36,7 +36,7 @@ void infTape<T>::decrement(const size_t delta) const{
     if(it-delta < vec.begin()){
         size_t it_dist = it - vec.begin();
         vec.resize(vec.size()+delta);
-        std::shift_right(vec.begin(), vec.end(), delta);
+        shift_right(vec.begin(), vec.end(), delta);
         it = vec.begin() + it_dist;
     }
     it -= delta;
