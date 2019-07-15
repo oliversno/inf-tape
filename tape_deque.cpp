@@ -17,7 +17,7 @@ void tapeDeque<T>::increment(){
 
 template <typename T>
 void tapeDeque<T>::increment(const size_t delta){
-    if(it+delta >= deque.back()){
+    if(it+delta >= deque.end()){
         deque.insert(deque.end(), delta, T{});
     }
     it += delta;
@@ -30,7 +30,7 @@ void tapeDeque<T>::decrement(){
 
 template <typename T>
 void tapeDeque<T>::decrement(const size_t delta){
-    if(it-delta < vec.begin()){
+    if(it-delta < deque.begin()){
         deque.insert(deque.begin(), delta, T{});
     }
     it -= delta;
