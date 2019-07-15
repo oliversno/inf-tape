@@ -11,93 +11,93 @@ int main(){
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    t1 = std::chrono::high_resolution_clock::now();
     tapeDeque<int> tape2;
-    auto t2 = std::chrono::high_resolution_clock::now();
+    t2 = std::chrono::high_resolution_clock::now();
     std::cout << "create tapeDeque took " << 
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    t1 = std::chrono::high_resolution_clock::now();
     tape1.increment(100);
-    auto t2 = std::chrono::high_resolution_clock::now();
+    t2 = std::chrono::high_resolution_clock::now();
     std::cout << "add 100 entries (back) infTape took " << 
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    t1 = std::chrono::high_resolution_clock::now();
     tape2.increment(100);
-    auto t2 = std::chrono::high_resolution_clock::now();
+    t2 = std::chrono::high_resolution_clock::now();
     std::cout << "add 100 entries (back) tapeDeque took " << 
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
     
-    auto t1 = std::chrono::high_resolution_clock::now();
+    t1 = std::chrono::high_resolution_clock::now();
     tape1.decrement(100);
-    auto t2 = std::chrono::high_resolution_clock::now();
+    t2 = std::chrono::high_resolution_clock::now();
     std::cout << "move back 100 entries infTape took " << 
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    t1 = std::chrono::high_resolution_clock::now();
     tape2.decrement(100);
-    auto t2 = std::chrono::high_resolution_clock::now();
+    t2 = std::chrono::high_resolution_clock::now();
     std::cout << "move back 100 entries tapeDeque took " << 
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    t1 = std::chrono::high_resolution_clock::now();
     tape1.decrement(100);
-    auto t2 = std::chrono::high_resolution_clock::now();
+    t2 = std::chrono::high_resolution_clock::now();
     std::cout << "add 100 entries (front) infTape took " << 
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    t1 = std::chrono::high_resolution_clock::now();
     tape2.decrement(100);
-    auto t2 = std::chrono::high_resolution_clock::now();
+    t2 = std::chrono::high_resolution_clock::now();
     std::cout << "add 100 entries (front) tapeDeque took " << 
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    t1 = std::chrono::high_resolution_clock::now();
     tape1.increment(100);
-    auto t2 = std::chrono::high_resolution_clock::now();
+    t2 = std::chrono::high_resolution_clock::now();
     std::cout << "move forward 100 entries infTape took " << 
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    t1 = std::chrono::high_resolution_clock::now();
     tape2.increment(100);
-    auto t2 = std::chrono::high_resolution_clock::now();
+    t2 = std::chrono::high_resolution_clock::now();
     std::cout << "move forward 100 entries tapeDeque took " << 
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    t1 = std::chrono::high_resolution_clock::now();
     tape1.set(20);
-    auto t2 = std::chrono::high_resolution_clock::now();
+    t2 = std::chrono::high_resolution_clock::now();
     std::cout << "set entry infTape took " << 
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    t1 = std::chrono::high_resolution_clock::now();
     tape2.set(20);
-    auto t2 = std::chrono::high_resolution_clock::now();
+    t2 = std::chrono::high_resolution_clock::now();
     std::cout << "set entry tapeDeque took " << 
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    t1 = std::chrono::high_resolution_clock::now();
     tape1.get();
-    auto t2 = std::chrono::high_resolution_clock::now();
+    t2 = std::chrono::high_resolution_clock::now();
     std::cout << "get entry infTape took " << 
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
 
-    auto t1 = std::chrono::high_resolution_clock::now();
+    t1 = std::chrono::high_resolution_clock::now();
     tape2.get();
-    auto t2 = std::chrono::high_resolution_clock::now();
+    t2 = std::chrono::high_resolution_clock::now();
     std::cout << "get entry tapeDeque took " << 
         std::chrono::duration_cast<std::chrono::milliseconds>(t2-t1).count() <<
         " milliseconds\n";
