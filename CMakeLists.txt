@@ -9,7 +9,8 @@ set(CMAKE_AUTOMOC ON)
 
 include_directories(${PROJECT_SOURCE_DIR})
 
-add_executable(main inf_tape.cpp tape_deque.cpp)
+add_executable(main main.cpp inf_tape.cpp tape_deque.cpp)
+
 
 if(BUILD_TESTS)
     include_directories(${GTEST_INCLUDE_DIRS})
