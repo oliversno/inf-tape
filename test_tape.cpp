@@ -1,5 +1,5 @@
 #include "inf_tape.cpp"
-#include "tape_deque.h"
+#include "tape_deque.cpp"
 #include <gtest/gtest.h>
 
 TEST(ApplyTest, InitInf){
