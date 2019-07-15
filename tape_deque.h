@@ -13,10 +13,10 @@ class tapeDeque{
 
         T get() const;
         void set(const T in);
-        void increment() const;
-        void increment(const size_t delta) const;
-        void decrement() const;
-        void decrement(const size_t delta) const;
+        void increment();
+        void increment(const size_t delta);
+        void decrement();
+        void decrement(const size_t delta);
     private:
         std::deque<T> deque;
         typename std::deque<T>::iterator it;

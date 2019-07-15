@@ -13,10 +13,10 @@ class infTape{
 
         T get() const;
         void set(const T in);
-        void increment() const;
-        void increment(const size_t delta) const;
-        void decrement() const;
-        void decrement(const size_t delta) const;
+        void increment();
+        void increment(const size_t delta);
+        void decrement();
+        void decrement(const size_t delta);
     private:
         std::vector<T> vec;
         typename std::vector<T>::iterator it;

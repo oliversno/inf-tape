@@ -12,13 +12,13 @@ void infTape<T>::set(const T in) {
 }
 
 template <typename T>
-void infTape<T>::increment() const{
+void infTape<T>::increment(){
     increment(1);
 }
 
 template <typename T>
-void infTape<T>::increment(const size_t delta) const{
-    if(it+delta >= vec.back()){
+void infTape<T>::increment(const size_t delta){
+    if(it+delta >= vec.end()){
         size_t it_dist = it - vec.begin();
         vec.resize(vec.size()+delta);
         it = vec.begin() + it_dist;
@@ -27,12 +27,12 @@ void infTape<T>::increment(const size_t delta) const{
 }
 
 template <typename T>
-void infTape<T>::decrement() const{
+void infTape<T>::decrement(){
     decrement(1);
 }
 
 template <typename T>
-void infTape<T>::decrement(const size_t delta) const{
+void infTape<T>::decrement(const size_t delta){
     if(it-delta < vec.begin()){
         size_t it_dist = it - vec.begin();
         vec.resize(vec.size()+delta);

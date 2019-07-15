@@ -11,12 +11,12 @@ void tapeDeque<T>::set(const T in) {
 }
 
 template <typename T>
-void tapeDeque<T>::increment() const{
+void tapeDeque<T>::increment(){
     increment(1);
 }
 
 template <typename T>
-void tapeDeque<T>::increment(const size_t delta) const{
+void tapeDeque<T>::increment(const size_t delta){
     if(it+delta >= deque.back()){
         deque.insert(deque.end(), delta, T{});
     }
@@ -24,12 +24,12 @@ void tapeDeque<T>::increment(const size_t delta) const{
 }
 
 template <typename T>
-void tapeDeque<T>::decrement() const{
+void tapeDeque<T>::decrement(){
     decrement(1);
 }
 
 template <typename T>
-void tapeDeque<T>::decrement(const size_t delta) const{
+void tapeDeque<T>::decrement(const size_t delta){
     if(it-delta < vec.begin()){
         deque.insert(deque.begin(), delta, T{});
     }
